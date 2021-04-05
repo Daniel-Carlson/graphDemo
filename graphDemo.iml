@@ -20,7 +20,7 @@
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
           <factory-entry name="default" value="47addd0d-8f81-4bd2-9b93-3171b994e342" />
-          <factory-entry name="postgres" />
+          <factory-entry name="postgres" value="47addd0d-8f81-4bd2-9b93-3171b994e342" />
         </datasource-mapping>
         <naming-strategy-map />
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/main/resources/META-INF/persistence.xml" />

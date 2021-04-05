@@ -5,7 +5,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui" >
 <h:head>
     <style type="text/css">
         body{
@@ -85,6 +85,11 @@
             top:16px;
             padding:0px;
         }
+        .ui-panelgrid ui-widget{
+            align-content: center;
+            align-self: center;
+        }
+
 
     </style>
 </h:head>
@@ -108,12 +113,73 @@
 
 
 <h:body>
-    <h3 style="text-align: center;color: aliceblue "  >“One machine can do the work of fifty ordinary people. No machine can do the work of one extraordinary person.” <br></br>– Elbert Hubbard.</h3>
+    <h1 style="text-align: center;color: aliceblue "  >Update Project </h1>
 
 
 
     <div class="dynamic-container">
-        <p>This is some sample text some ideas could be images, mission/vision ect maybe something frome the thing pat sent</p>
+    <div class="card" style="text-align: center">
+        <p:outputLabel value="Project ID: #{ProjectBB.selectedProject.project_ID}"></p:outputLabel>
+
+        <p:panelGrid columns="2" style="text-align: center" >
+
+
+            <h:form>
+        <div class="c1">
+        <h5>Project Name</h5>
+        <p:inputText value="#{ProjectBB.selectedProject.project_name}"/>
+        </div>
+
+            <div class="c6">
+        <h5>Assigned Emp</h5>
+        <p:inputText value="#{ProjectBB.selectedProject.assigned_emp}"/>
+            </div>
+
+            <div class="c2">
+        <h5>Start Date</h5>
+        <p:datePicker  value="#{ProjectBB.selectedProject.start_date}" />
+            </div>
+
+            <div class="c3">
+        <h5>End Date</h5>
+        <p:datePicker  value="#{ProjectBB.selectedProject.start_date}" />
+            </div>
+<!--
+            <div class="c4">
+        <h5>Complete</h5>
+        <p:selectOneRadio  value="#{ProjectBB.selectedProject.status}"
+                          layout="responsive" columns="1">
+            <f:selectItem itemLabel="incomplete" itemValue="incomplete"/>
+            <f:selectItem itemLabel="  complete" itemValue="complete"/>
+        </p:selectOneRadio>
+            </div>
+-->
+
+        <h5>Description</h5>
+        <p:inputTextarea value="#{ProjectBB.selectedProject.project_discription}"/>
+
+
+
+
+                <p:commandButton value="Submit" icon="pi pi-check" action="#{ProjectBB.test}"
+                                 styleClass="ui-button-success">
+
+
+                </p:commandButton>
+
+                <p:commandButton value="Cancel" icon="pi pi-times" actionListener="#{ProjectBB.openNew}"
+
+                                 styleClass="ui-button-danger">
+
+                </p:commandButton>
+            </h:form>
+
+
+     </p:panelGrid>
+
+
+
+    </div>
     </div>
 </h:body>
 </html>

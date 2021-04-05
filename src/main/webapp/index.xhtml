@@ -97,8 +97,8 @@
 
         <ul class="navigation">
             <li><a href="index.xhtml">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.xhtml">Visualizations</a></li>
+            <li><a href="projects.xhtml">Projects</a></li>
 
         </ul>
     </div>
@@ -108,47 +108,12 @@
 
 
 <h:body>
-    <h1 style="text-align: center;color: aliceblue "  >Lets Make Web Based Visualizations</h1>
+    <h3 style="text-align: center;color: aliceblue "  >“One machine can do the work of fifty ordinary people. No machine can do the work of one extraordinary person.” <br></br>– Elbert Hubbard.</h3>
 
-
-    <div class="dynamic-container">
-        <h3 style="padding-left: 10px">Java Database Driven Linechart</h3>
-    <h:form style="margin-top: 0px">
-        <p:spinner id="spin" value="#{backingBean.y}" prefix="Y= " min="0" max="100" />
-    <p:commandButton value ="Save" action="#{backingBean.CreatCoord()}" style="border-bottom: 8px;margin-left: 2%"/>
-</h:form>
-
-    <h:form>
-        <h:commandButton action="index" value="Refresh Chart" />
-
-    </h:form>
-    <h:form>
-        <h:commandButton action="#{backingBean.deleteCoords}" value="Delete All" />
-
-    </h:form>
-
-
-    <div class="card">
-        <p:lineChart model="#{backingBean.lineModel}" style="width: 100%; height: 500px;"/>
-    </div>
-    </div>
 
 
     <div class="dynamic-container">
-        <h3 style="padding-left: 10px">Tableau Public Embedded Visualization</h3>
-    <!--- Inserting Tableau Visualization -->
-    <div class='tableauPlaceholder' id='viz1616598750607' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fl&#47;FloridaSchoolDistricBasicClusterExample&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FloridaSchoolDistricBasicClusterExample&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fl&#47;FloridaSchoolDistricBasicClusterExample&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1616598750607');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
-
-    <div class="dynamic-container">
-        <h3 style="padding-left: 10px">Alteryx Exported Barchart</h3>
-    <!-- inserting an alteryx visualization -->
-    <div><script src='https://whitelist.alteryx.com/v1/downloads/v1/lib/plotly/plotly.min.20.2.js' type="text/javascript"></script><script src='https://whitelist.alteryx.com/v1/downloads/v1/lib/plotly/md5.min.js' type="text/javascript"></script></div>
-    <div><script type="javascript">window.ayxChartQueue = [];</script></div>
-    <div style="font-family: Arial; font-size: 12.00pt; font-style: normal; font-weight: normal; color: black; ">
-        <div><div id="chart-7"></div><script type="text/javascript">(function(){var renderCall = function(){return Plotly.newPlot("chart-7", [{"type":"bar","mode":"markers","xsrc":"Service State","ysrc":"BI Member ID","orientation":"v","aggregationField":"ysrc","aggregationFunction":"count","aggregationFieldName":"BI Member ID","x":["FL - Florida","CA - California","AL - Alabama","IN - Indiana","PA - Pennsylvania","MS - Mississippi","OH - Ohio","IL - Illinois","GA - Georgia","NC - North Carolina","MN - Minnesota","NY - New York","KS - Kansas","TN - Tennessee","NJ - New Jersey","LA - Louisiana","WV - West Virginia","TX - Texas","SC - South Carolina","MD - Maryland","CO - Colorado","VA - Virginia","MI - Michigan","KY - Kentucky","MA - Massachusetts","CT - Connecticut","MO - Missouri","MT - Montana","NM - New Mexico","NH - New Hampshire","AR - Arkansas","UT - Utah","RI - Rhode Island","WI - Wisconsin","OK - Oklahoma","WA - Washington","OR - Oregon","ME - Maine","DE - Delaware","DC","NV - Nevada","VT - Vermont","AZ - Arizona","HI - Hawaii","PR","IA - Iowa","ND - North Dakota","ID - Idaho","WY - Wyoming","SD - South Dakota","NE - Nebraska"],"y":[241374,478,1045,205,1700,116,229,1983,2393,810,77,341,275,384,135,75,33,917,207,137,100,273,147,112,208,68,130,14,36,41,34,58,36,44,35,51,35,40,22,95,26,5,151,49,22,16,9,5,3,2,4]}], {"title":{"text":""},"font":{"family":"sans-serif"},"autosize":false,"width":700,"height":849,"showlegend":true,"hovermode":"closest","xaxis":{"range":[-1.0723254611558507,27.662118408810998],"autorange":false,"title":{"text":"Service State"},"type":"category"},"yaxis":{"range":[-32.831264489353319,4583.293159641354],"autorange":false,"title":{"text":"BI Member ID"},"type":"linear"}}, {"locale": "en-Ayx"});}; if (window.ayxChartQueue) {window.ayxChartQueue.push(renderCall);} else {return renderCall();}})();</script></div>
-    </div>
-    <div><script type="text/javascript">var ayxWaitAndRender = function () {if (!window.ayxChartQueue) return; if (window.Plotly) {clearTimeout(window.ayxChartTimer);window.ayxChartQueue.forEach(function(cb){cb();})} else {clearTimeout(window.ayxChartTimer);window.ayxChartTimer = setTimeout(ayxWaitAndRender, 500);}};ayxWaitAndRender();</script></div>
+        <p>This is some sample text some ideas could be images, mission/vision ect maybe something frome the thing pat sent</p>
     </div>
 </h:body>
 </html>
